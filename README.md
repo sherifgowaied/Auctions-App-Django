@@ -1,4 +1,8 @@
 # Auctions-App-Django
 
 
-<img src="https://media0.giphy.com/media/oMHCtPONxjMxqOsN6n/giphy.gif" width="800px" />
+
+
+https://user-images.githubusercontent.com/91483223/185495465-437ca664-c8dc-4a9e-a4c3-f08541108327.mov
+
+
