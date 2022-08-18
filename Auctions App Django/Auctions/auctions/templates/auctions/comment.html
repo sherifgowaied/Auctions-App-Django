@@ -1,0 +1,43 @@
+{% extends 'auctions/layout.html'%}
+
+
+{% load static %}
+<link href="{% static 'auctions/styles.css' %}" rel="stylesheet">
+
+
+{% block body %}
+{% if message %}
+    <div  class="alert alert-{{status}}" role="alert">
+      <span >{{message}}</span>
+    </div>
+    {% endif%}
+<a href="{% url 'item' list_id=list.id%}"><button type="button"style="position:relative;left:20px;top:20px;;" class="btn btn-secondary">Back to the list</button></a>
+
+<div class="comments_table">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th >Username</th>
+            <th >Comment</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            {% for comment in comments_by_users%}
+          <tr>
+            
+            <td>{{comment.user}}</td>
+            <td>{{comment.comments}}</td>
+            
+          </tr>
+            {% empty %}
+            <td></td>
+            <td>No comment yet</td>
+            {% endfor%}
+          
+        </tbody>
+      </table>
+      
+
+</div>
+{% endblock%}

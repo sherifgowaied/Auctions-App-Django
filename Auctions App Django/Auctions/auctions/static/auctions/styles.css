@@ -1,0 +1,395 @@
+body
+{
+font-family: sans-serif;
+overflow: scroll;
+margin: auto;
+
+}
+html,body 
+{
+    height: 100%;
+    margin: auto;
+    
+    overflow: scroll;
+}
+.border
+{
+    height:70px;
+    width:100%;
+    
+    background-color:#020000;
+}
+#logout{
+    position:static;
+    left:890px;
+    top:19px;
+    color:aliceblue;
+    margin-left: 30px;
+    font-size: 20px;
+    padding-top:5px;
+   
+}
+#my_list{
+    position:static;
+    left:800px;
+    top:19px;
+    margin-left: 30px;
+    color:aliceblue;
+    font-size: 20px;
+    padding-top:5px;
+}
+#watched_list{
+    position:static;
+    left:665px;
+    top:19px;
+    margin-left: 30px;
+    color:aliceblue;
+    font-size: 20px;
+    padding-top:5px;
+}
+#active_lists{
+    position:static;
+    left:270px;
+    top:19px;
+    margin-left: 30px;
+    color:aliceblue;
+    font-size: 20px;
+    padding-top:5px;
+}
+#create_list{
+    position:static;
+    left:420px;
+    top:19px;
+    margin-left: 30px;
+    color:aliceblue;
+    font-size: 20px;
+    padding-top:5px;
+}
+.hummer
+{
+    height:63px;
+     width:60px; 
+     margin-left: 50px;
+     padding-top:7px;
+     left: 30px;
+    position: static;
+}
+
+.sign
+{
+    position:static;
+   margin-right: 15px;
+    float:right;
+    margin-top: 19px;
+    color:aliceblue;
+    top:19px;
+    font-size: 20px;
+    
+}
+.active
+{
+    position:static;
+    left:1000px;
+    top:5px;
+    color:aliceblue;
+    margin-left: 30px;
+    font-size: 20px;
+    padding-top:5px;
+}
+#eauctions_
+{
+    position:static; 
+    margin-top: 40px;
+    color:aliceblue;
+    font-size: 35px;
+    left:100px;  
+    padding-top:5px;
+}
+#categories
+{
+    position:static;
+    left:540px;
+    margin-left: 30px;
+    top:19px;
+    color:aliceblue;
+    font-size: 20px;
+    padding-top:5px;
+}
+#register{
+    position:static;
+    left:890px;
+    top:19px;
+    color:aliceblue;
+    font-size: 20px;
+    margin-left: 30px;
+    padding-top:5px;
+}
+#login{
+    position:static;
+    left:990px;
+    margin-left: 30px;
+    top:19px;
+    color:aliceblue;
+    font-size: 20px;
+    padding-top:5px;
+}
+.navar_bar{
+    text-decoration:none;
+
+}
+
+.register
+{
+    width:auto;
+    align-items:center;
+    margin:auto;
+    width:500px; 
+    margin:100px auto;
+}
+#button_register
+{
+    
+        background: #f0c14b;
+        
+        background-color: rgb(240, 193, 75);
+        border-color: #a88734 #9c7e31 #846a29;
+        border-top-color: rgb(168, 135, 52);
+        border-right-color: rgb(156, 126, 49);
+        border-bottom-color: rgb(132, 106, 41);
+        border-left-color: rgb(156, 126, 49);
+        color: #111;
+        position:relative;
+        left:160px;
+        width:200px;
+        top:20px;
+}
+.create
+{
+    width:auto;
+    align-items:center;
+    margin:auto;
+    width:700px; 
+    margin:15px auto;
+}
+#button_register1
+{
+    
+        background: #f0c14b;
+        
+        background-color: rgb(240, 193, 75);
+        border-color: #a88734 #9c7e31 #846a29;
+        border-top-color: rgb(168, 135, 52);
+        border-right-color: rgb(156, 126, 49);
+        border-bottom-color: rgb(132, 106, 41);
+        border-left-color: rgb(156, 126, 49);
+        color: #111;
+        position:relative;
+        left:230px;
+        width:250px;
+        top:20px;
+        margin-bottom: 60px;
+}
+.middle_div
+{
+    
+    height:1500px;
+    width:450px;
+    margin:0 250px;
+    margin-top: 30px;
+    
+}
+.small_div
+{
+    
+    width:400px;
+    height:150px;
+    margin-left:25px;
+    margin-top: 20px;
+    border: 3px solid grey;
+}
+.image_div
+{
+    
+    width:150px;
+    height:150px;
+    
+   
+    margin-left:0px;
+}
+
+.Automotive{
+margin-top:70px;
+margin-left:180px;
+font-weight:500px; 
+}
+.middle_div1
+{
+    position: relative;
+    height:1500px;
+    width:450px;
+    margin:0 520px;
+    border: 0px solid black;
+    bottom:1230px
+}
+.link_category
+{
+    color:black;
+    text-decoration:None;
+}
+.link_category:hover{
+    color:darksalmon;
+    text-decoration:None;
+}
+
+.bg-secondary{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:60px;
+    opacity: 900;
+    
+}
+ .row1{
+    width:100%;
+    margin-top:10px;
+}
+.card
+{
+    margin-top:17px
+    max-width 300px;
+}
+.sherif{
+    height:100%;
+    width:1100px;
+    border:0px solid black;
+    position: fixed;
+    left:100px;
+    display:flex
+    
+}
+.container
+{
+    position:relative;
+    
+    border:0px solid black;
+    left:20px;
+    top:55px;
+    width:1200px;
+    height: 100%;
+    height: auto;
+}
+.small_container
+{
+    display:flex;
+    flex-wrap: wrap;
+    height:100%;
+}
+
+.image
+{
+    height:300px;
+    width:280px;
+}
+.card_body1
+{
+    margin-left: 15px;
+    margin-top:15px;
+}
+
+
+.product
+{
+    display:flex;
+    flex-wrap: wrap;
+    width:900px;
+    height:600px;
+    border:1px solid black;
+}
+.small_product{
+    display:flex;
+    flex-wrap: wrap;
+}
+.add_comment
+{
+    border: 1px solid black;
+    position: fixed; /*or fixed*/
+    right: 12px;
+    width:400px;
+    height:400px;
+    bottom:240px;
+    
+}
+.image_right
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    position: fixed;
+    width: 270px;
+    height: 278px;
+    border: 1px solid black;
+    top:80px;
+    left:20px;
+}
+.description_field
+{
+    display:block;
+    position: fixed;
+    width: 300px;
+    height: auto;
+    border: 1px solid black;
+    top:370px;
+    left:20px;
+}
+.title_holder
+{
+    position:fixed;
+    border:0px solid black;
+    top:80px;
+    left:350px;
+    width:630px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+.comment_section
+{
+    position:fixed;
+    border:0px solid black;
+    top:620px;
+    left:330px;
+    width:1100px;
+    height:100%;
+    overflow-x:hidden; 
+    overflow-y:auto;
+}
+.message_alert
+{
+    position: fixed;
+    right:10px;
+    width: 410px;
+    height:60px;
+    margin-left:20px;
+    border: 1px solid black;
+   
+}
+.message_alert>div{
+    position: relative;
+    display: flex;
+}
+.see_comments
+{
+    position: fixed;
+    bottom:20px;
+    right:30px;   
+}
+.comments_table{
+    position: relative;
+    top:100px;
+    left:170px;
+    width:1000px;
+    border:0px solid black;
+    height:100%
+}

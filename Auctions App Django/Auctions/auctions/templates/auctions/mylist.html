@@ -1,0 +1,74 @@
+{% extends 'auctions/layout.html'%}
+
+
+
+{% load static%}
+
+
+{% block body%}
+{% if message %}
+    <div  class="alert alert-{{status}}" role="alert">
+      <span >{{message}}</span>
+    </div>
+    {% endif%}
+<h1 style="text-align:center; font-weight:400;color:#808080;position:relative;top:50px;">My Lists</h1>
+
+<div class="container">
+    <div class="small_container">
+     
+    {% for list in user_list  reversed %}
+
+     <div class="card_body1">
+      <div class="card" style="width: 22rem; height 18rem; ">
+       {% if list.image_url %}
+
+        <img src="{{list.image_url}}" class="card-img-top"  style="overflow:hidden;max-height:17rem;max-width:20.5rem;display:flex; justify-content:center;display: block;height:100%;width:auto;
+        margin-left: auto;
+        margin-right: auto;" alt="{{list.title}}">
+
+        {% else %}
+
+        <img src="{% static 'images/question.png'%}" class="card-img-top"  style="overflow:hidden;max-height:17rem;max-width:20.5rem;display:flex; justify-content:center;display: block;height:100%;width:auto;
+        margin-left: auto;
+        margin-right: auto;" alt="sora">
+
+
+        {% endif%}
+
+
+        <div class="card-body">
+          <h5 class="card-title">{{list.title}}</h5>
+          <p class="card-text" max="30"><span style="font-weight:900;font-size:16px;" >Posted By: </span><span style="font-size:14px;">{{ list.owner }}</span></p>
+          <p class="card-text" max="30"><span style="font-weight:900;font-size:16px;" >Category: </span><span style="font-size:16px;color:lightblue">{{ list.category }}</span></p>
+
+          <p class="card-text" maxlength="30"><span style="font-weight:900;font-size:16px;" >Description: </span><span style="font-size:18px;" maxlength="20">{{ list.description|slice:"0:60" }}... </span></p>
+          <p class="card-text" max="30"><span style="font-weight:900;font-size:16px;" >Price: </span><span style="font-size:14px;font-weight:900;">{{list.starting_bid}}&#36;</span></p>
+
+          {% if not list.closed  %}
+            <p class="card-text" max="30"><span style="font-weight:900;font-size:16px;" >Status: </span><span style="font-size:14px; color:green;">Opened</span></p>
+          {% else %}
+          <p class="card-text" max="30"><span style="font-weight:900;font-size:16px;" >Status: </span><span style="font-size:14px; color:red;">Closed</span></p>
+
+          {% endif%}
+
+          <a href="{% url 'item' list.id %}" class="btn btn-primary">View more detalis</a>
+        </div>
+      </div>
+     </div>
+     {% endfor%}
+
+     
+
+
+     
+
+
+    </div>
+  </div>
+    
+
+      
+          
+
+
+{% endblock %}

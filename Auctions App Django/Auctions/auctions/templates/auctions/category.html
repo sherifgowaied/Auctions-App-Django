@@ -1,0 +1,135 @@
+{% extends 'auctions/layout.html'%}
+
+
+{% load static %}
+
+
+{% block body%}
+
+<div class="middle_div">
+   <a href="{% url 'category_sort' category_kind="Automotive" %}" class="link_category" >
+   <h2 style="position:relative; left:200px; top:110px; ">Automotive</h2>
+    <nav class="small_div">
+        
+        <div class="image_div">
+            <img src="{% static 'images/car.jpeg' %}" alt="image" width="100%" height="80%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="Books" %}" class="link_category">
+        <h3 class="Automotive">Books</h3>
+    </nav>
+    <nav class="small_div">
+        <div class="image_div">
+            <img style="margin:10px;"  src="{% static 'images/steve_book.jpeg' %}" alt="image" width="80%" height="80%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="Entertainment" %}" class="link_category" >
+        <h2 class="Automotive">Entertainment</h2>
+    </nav>
+    <nav class="small_div">
+        <div class="image_div">
+            <img style="margin:10px;" style="margin:10px;" src="{% static 'images/dra3.jpeg' %}" alt="image" width="70%" height="70%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="Craft" %}" class="link_category">
+        <h2 class="Automotive">Craft</h2>
+    </nav>
+    <div>
+    <nav class="small_div">
+        <div class="image_div">
+            <img style="margin:10px;" src="{% static 'images/craft.jpeg' %}" alt="image" width="100%" height="80%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="Garden" %}" class="link_category">
+        <h2 class="Automotive">Garden</h2>
+    </nav>
+    <nav class="small_div">
+        <div class="image_div">
+            <img style="margin:10px;"src="{% static 'images/shovel.jpeg' %}" alt="image" width="100%" height="80%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="Office" %}"class="link_category" >
+        <h2 class="Automotive">Office</h2>
+    </nav>
+    <nav class="small_div">
+        <div class="image_div">
+            <img style="margin:10px;" src="{% static 'images/office_equipments.webp' %}" alt="image" width="100%" height="80%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="Toys" %}" class="link_category">
+        <h2 class="Automotive">Toys</h2>
+    </nav>
+    <nav class="small_div">
+        <div class="image_div">
+            <img  style="margin:10px;"src="{% static 'images/toys.jpeg' %}" alt="image" width="100%" height="80%">
+        </div>
+    </a>
+        <h2 class="Automotive"></h2>
+   
+</div>
+<div class="middle_div1">
+    <a  class="link_category"href="{% url 'category_sort' category_kind="Beauty" %}" >
+    <h2 style="position:relative; left:200px; top:110px; ">Beauty</h2>
+    <nav class="small_div">
+        
+        <div class="image_div">
+            <img style="margin:10px;" src="{% static 'images/download.jpeg' %}" alt="image" width="100%" height="80%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="Collectibles" %}" class="link_category" >
+        <h3 class="Automotive">Collectibles</h3>
+    </nav>
+    <nav class="small_div">
+        <div class="image_div">
+            <img  style="margin:10px;"src="{% static 'images/collect.jpeg' %}" alt="image" width="80%" height="80%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="Electronics" %}"  class="link_category">
+        <h2 class="Automotive">Electronics</h2>
+    </nav>
+    <nav class="small_div">
+        <div class="image_div">
+            <img style="margin:10px;" src="{% static 'images/smasung.png' %}" alt="image" width="100%" height="80%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="Fashion" %}" class="link_category" >
+        <h2 class="Automotive">Fashion</h2>
+    </nav>
+    <div>
+    <nav class="small_div">
+        <div class="image_div">
+            <img  style="margin:10px;" src="{% static 'images/shanta1.jpeg' %}" alt="image" width="100%" height="80%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="Home"%}" class="link_category" >
+        <h2 class="Automotive">Home</h2>
+    </nav>
+    <nav class="small_div">
+        <div class="image_div">
+            <img style="margin:10px;" src="{% static 'images/3fsh.jpeg' %}" alt="image" width="100%" height="80%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="Sports" %}" class="link_category" >
+        <h2 class="Automotive">Sports</h2>
+    </nav>
+    <nav class="small_div">
+        <div class="image_div">
+            <img style="margin:10px;" src="{% static 'images/shoes.jpeg' %}" alt="image" width="100%" height="80%">
+        </div>
+    </a>
+    <a href="{% url 'category_sort' category_kind="No Category" %}" class="link_category" >
+        <h2 class="Automotive">No Category</h2>
+    </nav>
+    <nav class="small_div">
+        <div class="image_div">
+            <img style="margin:10px;" src="{% static 'images/question.png' %}" alt="image" width="100%" height="80%">
+        </div>
+    </a>
+    
+</div>
+    
+    
+       
+   
+</div>
+{% endblock%}

@@ -1,0 +1,141 @@
+{% extends 'auctions/layout.html'%}
+
+
+{% load static %}
+<link href="{% static 'auctions/styles.css' %}" rel="stylesheet">
+
+
+
+{% block body %}
+
+  
+
+
+
+            
+
+
+{% for l in list%}
+
+<div class="image_right">
+  
+  <img src="{{l.image_url}}" style="min-width: 100%;min-height: 100%" alt="{{l.title}}">
+</div>
+
+<div class="description_field" >
+  <h6 style="font-weight:900; padding-left:10px;padding-top:10px; font-family:arial;">Description:</h6>
+  <p style="color:grey;padding-left:10px;"><small >{{l.description}}</small></p>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th >Avalible since</th>
+        <th >{{l.time}}</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td>List By</td>
+        <td>{{l.owner}}</td>
+        
+      </tr>
+      <tr>
+        
+        <td>Category</td>
+        <td>{{l.category}}</td>
+        
+      </tr>
+      <tr>
+        
+        <td>Title</td>
+        <td>{{l.title}}</td>
+        
+      </tr>
+      
+      
+    </tbody>
+  </table>
+  
+  <div class="title_holder">
+   {% if message %}
+    <div  class="alert alert-{{status}}" role="alert">
+      <span >{{message}}</span>
+    </div>
+    {% endif%}
+  </div>
+<div class="card border-dark mb-3" style="max-width: 40rem;height: 29rem;position:fixed;left:350px;top:150px; ">
+    <div class="card-header"><h2 style="text-align:center;">Current Price</h2></div>
+    <div class="card-body text-dark">
+      <h1 class="card-title" style="text-align:center;">{{l.starting_bid}}&#36;</h1>
+      <div style="width:600px;">
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <form action="{% url 'item' list_id=l.id%}" method="post">
+              {% csrf_token %}
+            <input type="number" step="0.01"  style="width:550px;" name="bid" class="form-control" required aria-label="Amount (to the nearest dollar)">
+            
+          </div>
+         <p style="color:grey; text-align:center;"> <small >enter a greater number more than {{l.starting_bid}} &#36;</small></p>
+         
+      <div>
+      <input type="submit" style="position:fixed;top:500px;left:380px; width:580px;" value="Place a Bid" id="button_register1" class="btn btn-primary">
+      
+    </form>
+    {% if l in request.user.watched_list.all %}
+    <form action="{% url 'add_watch' l.id %}" method="post">
+      {% csrf_token %}
+    <input type="submit" style="position:fixed;top:550px;left:380px; width:580px; background-color: #FF7F7F;" value="Remove from Watch List &#9825;"  class="btn btn-outline-primary">
+    </form>
+    {%else%}
+    <form action="{% url 'add_watch' l.id %}" method="post">
+      {% csrf_token %}
+      <input type="submit" style="position:fixed;top:550px;left:380px; width:580px;" value="Add to watch List &#9825;"  class="btn btn-outline-primary">
+      </form>
+    {%endif%}
+    </div>
+  </div>
+
+  <div class="add_comment">
+      
+    <div class="card border-dark mb-3" style="max-width: 25rem; height:25rem;">
+      <div class="card-header">Add comment</div>
+      <div class="card-body text-dark">
+        <form action="{% url 'comment' list_id=l.id %}" method="post">
+           {% csrf_token %}
+          <div class="form-group">
+            <label for="exampleInputEmail1">Add headline</label>
+            
+            <input type="text" class="form-control" id="headline"  placeholder="Add Headline">
+            <small id="emailHelp" class="form-text text-muted">Optional</small>
+            <br>
+            
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Create a comment</label>
+              <textarea type="text" name="comment" required class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+              <input type="submit" style="position:relative;top:20px;left:80px; width:200px;" value="Add comment" id="button_register1" class="btn btn-primary">
+
+            </div>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+
+  </div>
+  <div class="comment_section">
+
+    
+    <a href="{% url 'comment' list_id=l.id%}"><button type="button"style="position:fixed;left:550px;margin-top:20px;;" class="btn btn-secondary">See Comment on This list</button></a>
+
+
+  </div>
+  
+
+
+  
+{% endfor%}
+
+
+{% endblock%}
