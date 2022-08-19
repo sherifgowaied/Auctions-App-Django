@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/91483223/185496412-947478a0-f533-49ef-
 # Descripetion
 Like e-bay App allow user to create new list (rare item), add to my watchList, post comments, filter by category , add bids on items for purchase and login to thier accounts. django admin pannel to manage the app
 
-<img src="blob:https://imgur.com/552c37d5-86a2-43c4-b5f7-155460213c34" width="600px"/>
+<img src="https://i.imgur.com/xgQeQVV.png" width="600px"/>
 
 
 
